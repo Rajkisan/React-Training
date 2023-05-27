@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { useState } from "react";
+// import ReactDOM from "react-dom";
 
+// import "./App.css";
+
+
+
+
+
+
+import Navigation from "./navigation";
+ import Button from "./Button";
+ import Table from "./Table";
+ import Home from "./Home";
+ import { useState } from "react";
+ import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
 function App() {
+
+  // const [color, setColor] =useState("blue");
+
+//the first value "color" is our current state.
+
+//the second value, "setColor", is the function that is used to update our state.
+
+//SPA
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}> 
+        
+          <Route path="/table" element={<Table />} />
+          <Route path="/button" element={<Button />} />
+          <Route path="/navigation" element={<Navigation />} />
+          </Route>
+      </Routes>
+    </BrowserRouter>
+
+</>
   );
 }
 
 export default App;
+
+

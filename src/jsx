@@ -1,0 +1,23 @@
+JSX - javascript html
+components
+  => functional based components
+  => Class based components
+props => properties
+
+
+
+
+//functional components syntax
+
+
+ function App() {
+  
+var a= "hello vamshi"
+  return (
+<>
+<p>{a}</p>
+</>
+  );
+}
+
+export default App;
